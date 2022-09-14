@@ -1,0 +1,50 @@
+// Partial imports
+@import "./resets";
+@import "./variables";
+
+// Functions
+@function weight($weight-name) {
+  @return map-get($map: $fornt-weights, $key: $weight-name);
+}
+
+// Mixin
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($color: $primary-color, $amount: 100%);
+    color: darken($color: $text-color, $amount: 100%);
+  }
+}
+
+body {
+  background: $primary-color;
+  color: $text-color;
+}
+
+// Nesting
+.main {
+  @include flex-center(row);
+  width: 50rem;
+  margin: 0 auto;
+
+  // & equals parent class name
+  // #{} means parent class
+  #{&}-paragraph {
+    font-weight: weight(bold);
+
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.light {
+  @include theme($light-theme: true);
+}
