@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #040508;
+  color: #ffffff;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 50rem;
+  margin: 0 auto;
+}
+.main .main-paragraph {
+  font-weight: 900;
+}
+.main .main-paragraph:hover {
+  color: #d2ffaa;
+  cursor: pointer;
+}
+
+.light {
+  background: white;
+  color: black;
+}/*# sourceMappingURL=main.css.map */
