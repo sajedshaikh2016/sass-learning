@@ -1,6 +1,6 @@
 // Partial imports
-@import "./resets";
-@import "./variables";
+@use "./resets";
+@use "./variables";
 
 // Functions
 @function weight($weight-name) {
