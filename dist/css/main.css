@@ -24,6 +24,11 @@ body {
   color: #d2ffaa;
   cursor: pointer;
 }
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}
 
 .light {
   background: white;
